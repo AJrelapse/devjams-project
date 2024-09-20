@@ -4,6 +4,7 @@ import "../styles/pages.css";
 import Navbar from "../components/navbar";
 import {useNavigate} from "react-router-dom";
 import UploadAndDisplayImage from "../components/imageUpload";
+import Footer from "../components/footer"
 
 
 function Tomato() {
@@ -11,6 +12,7 @@ function Tomato() {
     <div className="App">
       <Navbar />
       <UploadAndDisplayImage/>
+      <Footer />
     </div>
   );
 }
