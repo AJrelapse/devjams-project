@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import Cards from "./cards";
+
 
 
 function Parallax() {
@@ -86,8 +86,9 @@ function Parallax() {
         </h2>
         <img src="/assets/images/plant.png" id="plant" alt="greenery" />
       </section>
-        <Cards/>
+        
     </div>
+
   );
 }
 
