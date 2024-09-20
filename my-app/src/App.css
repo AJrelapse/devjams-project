@@ -3,8 +3,10 @@
 
 /*navbar*/
 .custom-navbar {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000; /* Ensure it stays on top of other content */
   backdrop-filter: blur(0px); /* Start with no blur */
   background-color: transparent; /* Fully transparent background */
@@ -64,6 +66,7 @@ body {
   align-items: center;
   height: 100vh;
   overflow: hidden;
+  z-index: 0;
 }
 
 #text {
