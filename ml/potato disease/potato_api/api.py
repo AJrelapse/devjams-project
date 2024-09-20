@@ -12,9 +12,12 @@ app=FastAPI()
 
 
 
-MODEL = tf.keras.models.load_model('1.keras')
+MODEL = tf.keras.models.load_model('2.keras')
 
-CLASS_NAMES = ["Early Blight", "Late Blight", "Healthy"]
+CLASS_NAMES=['EarlyBlight',
+ 'Healthy'
+ 'Lateblight',
+ 'N']
 
 
 @app.get("/ping")
