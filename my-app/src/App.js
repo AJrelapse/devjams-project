@@ -1,20 +1,20 @@
 import React from "react";
 import "./App.css";
 import "./pages.css";
-import Navbar from "./components/navbar";
-import Parallax from "./components/parallax";
-import Footer from "./components/footer";
-import Cards from "./components/cards";
-import Login from "./pages/login";
-import Signup from "./pages/signup";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // Import Routes
+
+import Home from "./pages/Home";
+import Tomato from "./pages/tomato";
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Parallax />
-      <Cards/>
-      <Footer />
+      <Router>
+        <Routes> {/* Wrap Route components inside Routes */}
+          <Route path="/" element={<Home />} /> {/* Replace component with element */}
+          <Route path="/tomato" element={<Tomato />} /> {/* Same here */}
+        </Routes>
+      </Router>
       
       {/* <Login />
       <Signup/> */}

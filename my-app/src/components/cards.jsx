@@ -1,7 +1,9 @@
 import React from 'react';
-import "../Cards.css"
+import "../Cards.css";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 function Cards() {
+  const navigate = useNavigate(); // Initialize useNavigate
 
   return (
     <div className="container cards1">
@@ -22,7 +24,7 @@ function Cards() {
                 <p className="card__description">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dicta
                 </p>
-                <button className="button">EXAMINE</button>
+                <button className="button" onClick={() => navigate("/tomato")}>EXAMINE</button> {/* Replace history.push with navigate */}
               </div>
             </div>
           </div>
@@ -43,7 +45,7 @@ function Cards() {
                 <p className="card__description">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dicta
                 </p>
-                <button className="button">EXAMINE</button>
+                <button className="button" onClick={() => navigate("/potato")}>EXAMINE</button> {/* Navigate to the potato page */}
               </div>
             </div>
           </div>
@@ -64,7 +66,7 @@ function Cards() {
                 <p className="card__description">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dicta
                 </p>
-                <button className="button">EXAMINE</button>
+                <button className="button" onClick={() => navigate("/pepper")}>EXAMINE</button> {/* Navigate to the pepper page */}
               </div>
             </div>
           </div>
