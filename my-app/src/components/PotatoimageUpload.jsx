@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import "../styles/imageUpload.css";
+import { useNavigate } from "react-router-dom";
 
 // Define a functional component named UploadAndDisplayImage
 const UploadAndDisplayImage = () => {
+  const navigate = useNavigate();
   // Define a state variable to store the selected image
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -49,7 +51,7 @@ const UploadAndDisplayImage = () => {
               }}
             />
           </div>
-          <button className="form-submit-btn" type="submit">
+          <button className="form-submit-btn" type="submit" onClick={() => navigate("/potatoresultPage")}>
             Submit
           </button>
         </form>
