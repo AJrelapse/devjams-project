@@ -4,7 +4,7 @@ import "../styles/pages.css";
 import Navbar from "../components/navbar";
 import {useNavigate} from "react-router-dom";
 import UploadAndDisplayImage from "../components/TomatoimageUpload";
-import Footer from "../components/footer"
+import Footer from "../components/footer";
 
 
 function Tomato() {

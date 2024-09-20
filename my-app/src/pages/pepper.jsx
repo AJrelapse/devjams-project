@@ -4,6 +4,7 @@ import "../styles/pages.css";
 import Navbar from "../components/navbar";
 import {useNavigate} from "react-router-dom";
 import UploadAndDisplayImage from "../components/PepperimageUpload";
+import Footer from "../components/footer";
 
 
 function Pepper() {
@@ -11,6 +12,7 @@ function Pepper() {
     <div className="App">
       <Navbar />
       <UploadAndDisplayImage/>
+      <Footer/>
     </div>
   );
 }
