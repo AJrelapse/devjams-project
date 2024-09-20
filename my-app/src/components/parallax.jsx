@@ -16,7 +16,7 @@ function Parallax() {
 
       if (window.innerWidth > 768) {
         if (textRef.current)
-          textRef.current.style.marginTop = value * 2.5 + "px";
+          textRef.current.style.marginTop = value * 1.5 + "px";
         if (leafRef.current) {
           leafRef.current.style.top = value * -1.5 + "px";
           leafRef.current.style.left = value * 1.5 + "px";
