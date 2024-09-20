@@ -67,6 +67,8 @@ header {
   z-index: 100;
 }
 
+
+
 .logo {
   font-size: 2em;
   color: #359381;
@@ -127,4 +129,9 @@ header {
   font-size: 1em;
   color: #fff;
   font-weight: 300;
+}
+
+.nav{
+  position: top;
+  display: flex;
 }

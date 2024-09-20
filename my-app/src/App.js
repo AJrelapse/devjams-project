@@ -4,6 +4,7 @@ import Navbar from "./components/navbar";
 import Parallax from "./components/parallax";
 
 function App() {
+
   return (
     <div className="App">
       <Navbar />
