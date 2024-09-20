@@ -32,15 +32,13 @@ export function logout(_req: Request, res: Response): void {
 }
 
 export async function signup(req: Request, res: Response): Promise<void> {
-    const username: String = req.body.username;
+    const username: String = req.body.name;
     const password: String = req.body.password;
     const email: String = req.body.email;
-    const description: String = req.body.description;
-    const admin: boolean = (req.body.admin) ? true : false;
+    const admin: boolean = false;
     const adminedAt: Date | null = (admin) ? new Date() : null;
     const createdAt: Date = new Date();
     const updatedAt: Date = new Date();
-    const teamId = null;
 
     console.log(req.body)
     if (await User.exists({ email })) {
@@ -52,12 +50,10 @@ export async function signup(req: Request, res: Response): Promise<void> {
                 username,
                 password,
                 email,
-                description,
                 createdAt,
                 updatedAt,
                 admin,
                 adminedAt,
-                teamId
             };
             console.log(userData);
             const usr = await User.create(userData);

@@ -6,12 +6,10 @@ interface user {
     username: string,
     email: string,
     password: string,
-    description: string,
     createdAt: Date,
     updatedAt: Date,
     admin: Boolean,
     adminedAt?: Date,
-    teamId:mongoose.Types.ObjectId |null
 }
 
 const userSchema = new mongoose.Schema<user>({
@@ -33,10 +31,6 @@ const userSchema = new mongoose.Schema<user>({
         required: [true, 'Please enter a password'],
         minlength: [8, 'Minimum password length is 8 characters']
     },
-    "description": {
-        type: String,
-        required: true
-    },
     "createdAt": {
         type: Date,
         required: true
@@ -55,11 +49,7 @@ const userSchema = new mongoose.Schema<user>({
         required: false,
         default: null
     },
-    "teamId": {
-        type: mongoose.Schema.Types.ObjectId,
-        required: false,
-        default: null
-    },
+
 })
 
 userSchema.pre('save', async function (next) {
