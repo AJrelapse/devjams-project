@@ -3,18 +3,16 @@ import "../styles/App.css";
 import "../styles/pages.css";
 import Navbar from "../components/navbar";
 import {useNavigate} from "react-router-dom";
-import UploadAndDisplayImage from "../components/TomatoimageUpload";
-import Footer from "../components/footer"
+import UploadAndDisplayImage from "../components/PepperimageUpload";
 
 
-function Tomato() {
+function Pepper() {
   return (
     <div className="App">
       <Navbar />
       <UploadAndDisplayImage/>
-      <Footer />
     </div>
   );
 }
 
-export default Tomato;
+export default Pepper;

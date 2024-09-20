@@ -7,7 +7,7 @@ function Cards() {
 
   return (
     <div className="container1 cards1">
-      <h1 className="card__title1 ">PLANT</h1>
+      <h1 className="card__title1 ">PLANT DISEASE PREDICTOR</h1>
       <ul id="cards">
         <li className="cardd" id="card1" key="card1">
           <div className="cardd" data-index="0">
