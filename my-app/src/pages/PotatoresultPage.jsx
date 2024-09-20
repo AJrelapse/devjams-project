@@ -6,12 +6,12 @@ import {useNavigate} from "react-router-dom";
 import PotatoresultDisplay from "../components/potatoResult";
 import Footer from "../components/footer";
 
-
+const res="Hello";
 function PotatoResult() {
   return (
     <div className="App">
       <Navbar />
-      <PotatoresultDisplay />
+      <PotatoresultDisplay result={res}/>
       <Footer />
     </div>
   );

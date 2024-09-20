@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../styles/imageUpload.css";
 
 // Define a functional component named UploadAndDisplayImage
-const TomatoresultDisplay = () => {
+const TomatoresultDisplay = (props) => {
 
   // Return the JSX for rendering
   return (
@@ -15,7 +15,7 @@ const TomatoresultDisplay = () => {
 
           {/* Input element to select an image file */}
           <div className="form-group">
-            <h1>HELLO</h1>
+            <h3>The Tomato plant has {props.result}</h3>
             
           </div>
         </form>

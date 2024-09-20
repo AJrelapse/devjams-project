@@ -6,12 +6,12 @@ import {useNavigate} from "react-router-dom";
 import PepperresultDisplay from "../components/potatoResult";
 import Footer from "../components/footer";
 
-
+const res="Hello";
 function PepperResult() {
   return (
     <div className="App">
       <Navbar />
-      <PepperresultDisplay/>
+      <PepperresultDisplay result={res}/>
       <Footer />
     </div>
   );

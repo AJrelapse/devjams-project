@@ -6,12 +6,12 @@ import {useNavigate} from "react-router-dom";
 import TomatoresultDisplay from "../components/tomatoResult";
 import Footer from "../components/footer";
 
-
+const res="early";
 function TomatoResult() {
   return (
     <div className="App">
       <Navbar />
-      <TomatoresultDisplay />
+      <TomatoresultDisplay result={res}/>
       <Footer />
     </div>
   );
