@@ -2,6 +2,10 @@
 
 
 /*navbar*/
+.logo{
+  width: 2%;
+  height: 2%;
+}
 .custom-navbar {
   position: fixed;
   top: 0;

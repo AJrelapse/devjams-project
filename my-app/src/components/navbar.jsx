@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 
+
 function Navbar() {
   const navigate = useNavigate(); 
   useEffect(() => {
@@ -25,7 +26,7 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg custom-navbar">
       <div className="container-fluid">
-        <a className="navbar-brand px-4 mx-4" href="/">AgroPulse</a>
+        <a className="navbar-brand px-4 mx-4" href="/home">AgroPulse </a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
