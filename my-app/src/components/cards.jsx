@@ -6,11 +6,11 @@ function Cards() {
   const navigate = useNavigate(); // Initialize useNavigate
 
   return (
-    <div className="container cards1">
-      <h1 className="card__title">PLANT</h1>
+    <div className="container1 cards1">
+      <h1 className="card__title1 ">PLANT</h1>
       <ul id="cards">
-        <li className="card" id="card1" key="card1">
-          <div className="card" data-index="0">
+        <li className="cardd" id="card1" key="card1">
+          <div className="cardd" data-index="0">
             <div className="card__inner">
               <div className="card__image-container">
                 <img
@@ -30,8 +30,8 @@ function Cards() {
           </div>
         </li>
 
-        <li className="card" id="card2" key="card2">
-          <div className="card" data-index="0">
+        <li className="cardd" id="card2" key="card2">
+          <div className="cardd" data-index="0">
             <div className="card__inner">
               <div className="card__image-container">
                 <img
@@ -51,8 +51,8 @@ function Cards() {
           </div>
         </li>
 
-        <li className="card" id="card3" key="card3">
-          <div className="card" data-index="0">
+        <li className="cardd" id="card3" key="card3">
+          <div className="cardd" data-index="0">
             <div className="card__inner">
               <div className="card__image-container">
                 <img

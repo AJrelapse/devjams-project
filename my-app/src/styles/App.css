@@ -15,7 +15,7 @@
 
 .custom-navbar.scrolled {
   backdrop-filter: blur(10px); /* Add blur when scrolled */
-  background-color: rgba(255, 255, 255, 0.235); /* Slightly opaque background when scrolled */
+  background-color: rgba(255, 255, 255, 0.514); /* Slightly opaque background when scrolled */
 }
 
 .navbar-nav .nav-link {
@@ -23,7 +23,7 @@
 }
 
 .navbar-toggler {
-  border-color: rgba(255, 255, 255, 0.5); /* Change the border color of the toggler */
+  border-color: rgba(255, 255, 255, 0.6); /* Change the border color of the toggler */
 }
 
 .custom-navbar .navbar-brand {
