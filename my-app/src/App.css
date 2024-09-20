@@ -44,9 +44,7 @@
  
 
 /* parralax */
-
-
-* {
+.para{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -94,8 +92,8 @@ body {
 /* Styling for the section after the parallax */
 .sec {
   position: relative;
-  background: #003329;
-  padding: 100px;
+  background: #ffffff;
+  padding: 0px;
 }
 
 .sec h2 {
