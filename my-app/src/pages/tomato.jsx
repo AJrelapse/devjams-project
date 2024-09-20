@@ -1,15 +1,16 @@
 import React from "react";
-import "../App.css";
-import "../pages.css";
+import "../styles/App.css";
+import "../styles/pages.css";
 import Navbar from "../components/navbar";
 import {useNavigate} from "react-router-dom";
+import UploadAndDisplayImage from "../components/imageUpload";
 
 
 function Tomato() {
-    const history=useNavigate();
   return (
     <div className="App">
       <Navbar />
+      <UploadAndDisplayImage/>
     </div>
   );
 }

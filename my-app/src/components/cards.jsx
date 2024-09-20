@@ -1,5 +1,5 @@
 import React from 'react';
-import "../Cards.css";
+import "../styles/Cards.css";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 function Cards() {
