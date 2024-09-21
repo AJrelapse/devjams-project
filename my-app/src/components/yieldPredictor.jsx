@@ -112,7 +112,9 @@ function YieldPredictPage() {
           />
         </div>
 
-        <button type="submit" className={styles.submitBtn}>
+        <button type="submit" className={styles.submitBtn} onClick={async () => {
+              navigate("/Yieldresult");
+            }}>
           Submit
         </button>
       </form>
