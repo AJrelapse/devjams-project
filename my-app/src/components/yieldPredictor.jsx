@@ -26,13 +26,17 @@ function YieldPredictPage() {
     // Handle form submission logic here
     try {
       const data = formData;
-      const response = axios.post(
+      console.log(data);
+      const res = axios.post(
         "http://localhost:3001/api/v1/yield/predict",
         data,
         { withCredentials: true }
-      ).then(()=>
-        navigate("/Yieldresult" , {state:{...response.data,cropType:data.cropType,season:data.season,area:data.area}}));
-      console.log(response.data);
+      ).then((response) => {
+        console.log("hiii")
+        console.log(response.data);
+        const t = { state: { result: { yield:response.data, cropType: data.cropType, season: data.season, area: data.area } } };
+        navigate("/Yieldresult" , t)});
+      console.log(res.data);
     } catch (error) {
       console.log(error);
     }
@@ -143,9 +147,7 @@ const cropOptions = [
           />
         </div>
 
-        <button type="submit" className={styles.submitBtn} onClick={async () => {
-              navigate("/Yieldresult");
-            }}>
+        <button type="submit" className={styles.submitBtn} onClick={handleSubmit}>
           Submit
         </button>
       </form>

@@ -4,6 +4,7 @@ import "../styles/pages.css";
 import Navbar from "../components/navbar";
 import YieldResultPage from "../components/yieldResult";
 import Footer from "../components/footer";
+import {useNavigate,useLocation} from "react-router-dom";
 
 
 function YieldResult() {
