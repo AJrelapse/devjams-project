@@ -7,7 +7,7 @@ function Weather() {
 
   return (
     <div className="container1 cards1">
-        <h1>Hello</h1>
+        <h1>Check Weather</h1>
 
           <button className="form-submit-btn" type="submit" onClick={async() => {
             navigate("/weather")
