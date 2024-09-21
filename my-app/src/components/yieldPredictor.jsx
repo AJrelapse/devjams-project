@@ -31,7 +31,7 @@ function YieldPredictPage() {
         data,
         { withCredentials: true }
       ).then(()=>
-        navigate("/Yieldresult" , {state:response.data}));
+        navigate("/Yieldresult" , {state:{...response.data,cropType:data.cropType,season:data.season,area:data.area}}));
       console.log(response.data);
     } catch (error) {
       console.log(error);
