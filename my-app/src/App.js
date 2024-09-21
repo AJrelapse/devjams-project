@@ -10,6 +10,12 @@ import Pepper from "./pages/pepper";
 import TomatoResult from "./pages/TomatoresultPage";
 import PotatoResult from "./pages/PotatoresultPage";
 import PepperResult from "./pages/PepperresultPage";
+import YieldPredict from "./pages/yieldPredictPage";
+import YieldResult from "./pages/yieldResultPage";
+import MapPage from "./pages/mapPage";
+
+
+
 
 
 
@@ -25,6 +31,12 @@ function App() {
           <Route path="/tomatoresultPage" element={<TomatoResult />} />
           <Route path="/potatoresultPage" element={<PotatoResult />} />
           <Route path="/pepperresultPage" element={<PepperResult />} />
+          <Route path="/YieldPage" element={<YieldPredict />} />
+          <Route path="/Yieldresult" element={<YieldResult />} />
+          <Route path="/MapPage" element={<MapPage />} />
+
+
+
 
 
 

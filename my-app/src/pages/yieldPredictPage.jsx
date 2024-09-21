@@ -2,18 +2,17 @@ import React from "react";
 import "../styles/App.css";
 import "../styles/pages.css";
 import Navbar from "../components/navbar";
-import UploadAndDisplayImage from "../components/PepperimageUpload";
+import YieldPredictPage from "../components/yieldPredictor";
 import Footer from "../components/footer";
 
-
-function Pepper() {
+function YieldPredict() {
   return (
     <div className="App">
       <Navbar />
-      <UploadAndDisplayImage/>
-      <Footer/>
+      <YieldPredictPage />
+      <Footer />
     </div>
   );
 }
 
-export default Pepper;
+export default YieldPredict;

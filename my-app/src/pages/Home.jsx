@@ -5,8 +5,9 @@ import Navbar from "../components/navbar";
 import Parallax from "../components/parallax";
 import Footer from "../components/footer";
 import Cards from "../components/cards";
-import {useNavigate} from "react-router-dom";
-import Yield from "../components/yieldpredict";
+import Yield from "../components/yield";
+import Map from "../components/map";
+import Weather from "../components/weather";
 
 
 function Home() {
@@ -16,6 +17,8 @@ function Home() {
       <Parallax />
       <Cards/>
       <Yield />
+      <Map />
+      <Weather/>
       <Footer />
     </div>
   );

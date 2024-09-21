@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styles/imageUpload.css";
 
 // Define a functional component named UploadAndDisplayImage
