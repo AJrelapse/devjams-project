@@ -7,10 +7,13 @@ import Footer from "../components/footer";
 
 
 function YieldResult() {
+  const location = useLocation();
+  console.log(location);
+  const res = location.state.result;
   return (
     <div className="App">
       <Navbar />
-      <YieldResultPage />
+      <YieldResultPage result={res}/>
       <Footer />
     </div>
   );

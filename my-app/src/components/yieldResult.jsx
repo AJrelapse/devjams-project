@@ -2,25 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import styles from '../styles/YieldResult.module.css'; // Import CSS module
 
-function YieldResultPage() {
+function YieldResultPage(props) {
   const navigate = useNavigate();
-  const [yieldResult, setYieldResult] = useState(null); // State to store the yield result
-
-  useEffect(() => {
-    // Simulating an API call or a calculation for the yield result
-    const result = calculateYield(); 
-    setYieldResult(result);
-  }, []);
-
-  const calculateYield = () => {
-    // Replace with actual logic to calculate yield prediction
-    return {
-      crop: "Wheat",
-      predictedYield: "15 tons",
-      season: "Winter",
-      area: "100 hectares",
-    };
-  };
 
   return (
     <div className={styles.container}>
@@ -29,10 +12,10 @@ function YieldResultPage() {
 
         {yieldResult ? (
           <div className={styles.resultContent}>
-            <p><strong>Crop:</strong> {yieldResult.crop}</p>
-            <p><strong>Predicted Yield:</strong> {yieldResult.predictedYield}</p>
-            <p><strong>Season:</strong> {yieldResult.season}</p>
-            <p><strong>Area:</strong> {yieldResult.area}</p>
+            <p><strong>Crop:</strong> {props.result.crop}</p>
+            <p><strong>Predicted Yield:</strong> {props.result.predictedYield}</p>
+            <p><strong>Season:</strong> {props.result.season}</p>
+            <p><strong>Area:</strong> {props.result.area}</p>
           </div>
         ) : (
           <p>Loading result...</p>
@@ -40,7 +23,7 @@ function YieldResultPage() {
 
         <button
           className={styles.backBtn}
-          onClick={() => navigate("/YieldPredict")}
+          onClick={() => navigate("/YieldPage")}
         >
           Back to Prediction
         </button>

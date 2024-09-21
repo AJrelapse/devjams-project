@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
-
+import Cookies from "js-cookie";
 function Navbar() {
   const navigate = useNavigate();
   useEffect(() => {
@@ -84,19 +84,26 @@ function Navbar() {
               </ul>
             </li>
           </ul>
+          {
+        !Cookies.get("X-Auth-Token") && (
           <form className="d-flex mx-4 px-4" role="search">
-            <button className="button1 mx-4 px-4" type="submit" onClick={async() => {
-            navigate("/Login")
-          }}>
-            <span>Login</span>
+            <button
+              className="button1 mx-4 px-4"
+              type="button"
+              onClick={() => navigate("/Login")}
+            >
+              <span>Login</span>
             </button>
-            <button className="button1 mx-4 px-4" type="submit" onClick={async() => {
-            navigate("/Signup")
-          }}>
-            <span>Sign Up</span>
+            <button
+              className="button1 mx-4 px-4"
+              type="button"
+              onClick={() => navigate("/Signup")}
+            >
+              <span>Sign Up</span>
             </button>
-
           </form>
+        )
+      }
         </div>
       </div>
     </nav>

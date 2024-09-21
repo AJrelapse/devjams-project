@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
 import styles from "../styles/signup.module.css"; // Import the CSS module
+import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
+  const navigate = useNavigate();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -21,11 +23,11 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:3001/api/v1/auth/signup", {
+      axios.post("http://localhost:3001/api/v1/auth/signup", {
         name,
         email,
         password,
-      });
+      }).then((res) => { navigate("/")});
     } catch (error) {
       console.error(error);
     }

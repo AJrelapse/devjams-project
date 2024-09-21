@@ -31,14 +31,28 @@ function YieldPredictPage() {
         data,
         { withCredentials: true }
       ).then(()=>
-        navigate("/Yieldresult"));
+        navigate("/Yieldresult" , {state:{...response.data,cropType:data.cropType,season:data.season,area:data.area}}));
       console.log(response.data);
     } catch (error) {
       console.log(error);
     }
   };
 
-  const cropOptions = Array.from({ length: 55 }, (_, index) => `Crop ${index + 1}`);
+const cropOptions = [
+    'Arecanut', 'Arhar/Tur', 'Castor seed', 'Coconut', 'Cotton(lint)',
+    'Dry chillies', 'Gram', 'Jute', 'Linseed', 'Maize', 'Mesta',
+    'Niger seed', 'Onion', 'Other Rabi pulses', 'Potato',
+    'Rapeseed &Mustard', 'Rice', 'Sesamum', 'Small millets',
+    'Sugarcane', 'Sweet potato', 'Tapioca', 'Tobacco', 'Turmeric',
+    'Wheat', 'Bajra', 'Black pepper', 'Cardamom', 'Coriander',
+    'Garlic', 'Ginger', 'Groundnut', 'Horse-gram', 'Jowar', 'Ragi',
+    'Cashewnut', 'Banana', 'Soyabean', 'Barley', 'Khesari', 'Masoor',
+    'Moong(Green Gram)', 'Other Kharif pulses', 'Safflower',
+    'Sannhamp', 'Sunflower', 'Urad', 'Peas & beans (Pulses)',
+    'other oilseeds', 'Other Cereals', 'Cowpea(Lobia)',
+    'Oilseeds total', 'Guar seed', 'Other Summer Pulses', 'Moth'
+  ];
+  
 
   return (
     
@@ -74,7 +88,10 @@ function YieldPredictPage() {
             <option value="" disabled>Select Season</option>
             <option value="Winter">Winter</option>
             <option value="Summer">Summer</option>
-            <option value="Monsoon">Monsoon</option>
+            <option value="Autumn">Autumn</option>
+            <option value="Kharif">Kharif</option>
+            <option value="Rabi">Rabi</option>
+            <option value="Whole Year">Whole Year</option>
           </select>
         </div>
 
