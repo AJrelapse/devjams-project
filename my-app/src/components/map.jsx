@@ -14,10 +14,10 @@ function Map() {
           <div className="row align-items-center g-lg-5 py-5">
             <div className="col-lg-7 text-center text-lg-start">
               <h1 className="display-4 fw-bold forColor lh-1 mb-3 pb-3 animate-text">
-                Vertically centered hero sign-up form
+                Explore Plant Disease Outbreaks Across India
               </h1>
               <p className="col-lg-10 fs-4 animate-text forColor pt-3 mt-3">
-                Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.
+              Stay informed about the latest plant disease outbreaks in various states of India. Click below to view an interactive map that visualizes affected areas and helps track the spread. Stay ahead and safeguard your crops!
               </p>
               <button
                 className="mapB"

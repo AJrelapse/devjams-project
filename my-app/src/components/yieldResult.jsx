@@ -10,16 +10,14 @@ function YieldResultPage(props) {
       <div className={styles.resultCard}>
         <h1 className={styles.title}>Yield Prediction Result</h1>
 
-        {yieldResult ? (
+
           <div className={styles.resultContent}>
             <p><strong>Crop:</strong> {props.result.crop}</p>
             <p><strong>Predicted Yield:</strong> {props.result.predictedYield}</p>
             <p><strong>Season:</strong> {props.result.season}</p>
             <p><strong>Area:</strong> {props.result.area}</p>
           </div>
-        ) : (
-          <p>Loading result...</p>
-        )}
+
 
         <button
           className={styles.backBtn}
