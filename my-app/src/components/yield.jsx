@@ -7,8 +7,8 @@ function Yield() {
   const navigate = useNavigate(); 
 
   return (
-    <div className="container1 cards1">
-      <h1>Yield Predictor</h1>
+    <div className="container2 cards1">
+      <h1 className="titleY">YIELD PREDICTOR</h1>
       
       <div className="card">
         <div className="image"></div>
@@ -35,6 +35,7 @@ function Yield() {
           </button>
         </div>
       </div>
+      
     </div>
   );
 }
