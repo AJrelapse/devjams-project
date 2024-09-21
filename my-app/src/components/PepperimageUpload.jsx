@@ -74,24 +74,17 @@ const UploadAndDisplayImage = () => {
               }}
             />
           </div>
-<<<<<<< Updated upstream
-          <button className="form-submit-btn" type="submit" onClick={async() => {
-            // await upload();
-            navigate("/pepperresultPage")
-          }}>            Submit
-=======
-          <button className="form-submit-btn" type="submit" onClick={async(e) => {
+          <button className="form-submit-btn" type="submit" onClick={async (e) => {
             e.preventDefault();
-            const data=upload().then((e)=>
-            navigate("/pepperresultPage", { state: {result:e.class} }));
+            const data = upload().then((e) =>
+              navigate("/pepperresultPage", { state: { result: e.class } }));
           }}>
             Submit
->>>>>>> Stashed changes
           </button>
         </form>
       </div>
     </div>
-    
+
   );
 };
 
