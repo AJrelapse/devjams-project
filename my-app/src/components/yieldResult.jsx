@@ -13,9 +13,9 @@ console.log(props)
 
           <div className={styles.resultContent}>
             <p><strong>Crop:</strong> {props.result.cropType}</p>
-            <p><strong>Predicted Yield:</strong> {props.result.yield}</p>
+            <p><strong>Predicted Yield:</strong> {props.result.yield*props.result.area} metric tonnes</p>
             <p><strong>Season:</strong> {props.result.season}</p>
-            <p><strong>Area:</strong> {props.result.area}</p>
+            <p><strong>Area:</strong> {props.result.area} hectares</p>
           </div>
 
 
