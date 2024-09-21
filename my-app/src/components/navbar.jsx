@@ -24,7 +24,7 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg custom-navbar">
       <div className="container-fluid">
-        <a className="navbar-brand px-4 mx-4" href="/home">
+        <a className="navbar-brand px-4 mx-4" href="/">
           AgroPulse{" "}
         </a>
         <button
@@ -46,13 +46,13 @@ function Navbar() {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">
-                Features
+              <a className="nav-link" href="/YieldPage">
+                Yield
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">
-                Pricing
+              <a className="nav-link" href="/MapPage">
+                Map
               </a>
             </li>
             <li className="nav-item dropdown">
