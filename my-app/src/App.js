@@ -13,20 +13,20 @@ import PepperResult from "./pages/PepperresultPage";
 import YieldPredict from "./pages/yieldPredictPage";
 import YieldResult from "./pages/yieldResultPage";
 import MapPage from "./pages/mapPage";
-
-
-
-
-
+import Login from "./pages/login";
+import Signup from "./pages/signup";
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <Routes> {/* Wrap Route components inside Routes */}
-          <Route path="/" element={<Home />} /> {/* Replace component with element */}
+        <Routes>
+          {" "}
+          {/* Wrap Route components inside Routes */}
+          <Route path="/" element={<Home />} />{" "}
+          {/* Replace component with element */}
           <Route path="/tomato" element={<Tomato />} /> {/* Same here */}
-          <Route path="/potato" element={<Potato />} /> 
+          <Route path="/potato" element={<Potato />} />
           <Route path="/pepper" element={<Pepper />} />
           <Route path="/tomatoresultPage" element={<TomatoResult />} />
           <Route path="/potatoresultPage" element={<PotatoResult />} />
@@ -34,15 +34,9 @@ function App() {
           <Route path="/YieldPage" element={<YieldPredict />} />
           <Route path="/Yieldresult" element={<YieldResult />} />
           <Route path="/MapPage" element={<MapPage />} />
-
-
-
-
-
-
         </Routes>
       </Router>
-      
+
       {/* <Login />
       <Signup/> */}
     </div>
