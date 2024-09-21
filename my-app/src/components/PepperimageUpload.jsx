@@ -63,7 +63,7 @@ const UploadAndDisplayImage = () => {
             />
           </div>
           <button className="form-submit-btn" type="submit" onClick={async() => {
-            await upload();
+            // await upload();
             navigate("/pepperresultPage")
           }}>            Submit
           </button>
