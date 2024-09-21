@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import styles from '../styles/yieldpredict.module.css'; // Import CSS module
+import axios from 'axios';
 
 function YieldPredictPage() {
   const navigate = useNavigate();
@@ -18,10 +19,23 @@ function YieldPredictPage() {
     setFormData({ ...formData, [name]: value });
   };
 
+  
+
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission logic here
-    navigate("/Yieldresult");
+    try {
+      const data = formData;
+      const response = axios.post(
+        "http://localhost:3001/api/v1/yield/predict",
+        data,
+        { withCredentials: true }
+      ).then(()=>
+        navigate("/Yieldresult"));
+      console.log(response.data);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const cropOptions = Array.from({ length: 55 }, (_, index) => `Crop ${index + 1}`);

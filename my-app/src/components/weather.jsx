@@ -10,7 +10,7 @@ function Weather() {
         <h1>Check Weather</h1>
 
           <button className="form-submit-btn" type="submit" onClick={async() => {
-            navigate("/weather")
+            window.location.href="http://localhost:3002"
           }}>            Submit
           </button>
       </div>
