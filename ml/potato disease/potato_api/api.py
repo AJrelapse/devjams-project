@@ -15,7 +15,7 @@ app=FastAPI()
 MODEL = tf.keras.models.load_model('2.keras')
 
 CLASS_NAMES=['EarlyBlight',
- 'Healthy'
+ 'Healthy',
  'Lateblight',
  'N']
 
