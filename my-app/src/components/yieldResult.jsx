@@ -40,7 +40,7 @@ function YieldResultPage() {
 
         <button
           className={styles.backBtn}
-          onClick={() => navigate("/YieldPredict")}
+          onClick={() => navigate("/YieldPage")}
         >
           Back to Prediction
         </button>
