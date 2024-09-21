@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 // Define a functional component named UploadAndDisplayImage
 const UploadAndDisplayImage = () => {
-  const upload = async () => {
+  const upload2 = async () => {
     const formData = new FormData();
     formData.append("file", selectedImage);
 
@@ -76,7 +76,7 @@ const UploadAndDisplayImage = () => {
           </div>
           <button className="form-submit-btn" type="submit" onClick={async (e) => {
             e.preventDefault();
-            const data = upload().then((e) =>
+            const data = upload2().then((e) =>
               navigate("/pepperresultPage", { state: { result: e.class } }));
           }}>
             Submit

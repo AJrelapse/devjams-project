@@ -19,6 +19,11 @@
   font-family: 'Roboto', sans-serif;
 }
 
+.h1{
+  font-family: 'Roboto', sans-serif;
+  color: #003329;
+
+}
 /* Form styling */
 .form {
   display: flex;

@@ -9,7 +9,7 @@ const UploadAndDisplayImage = () => {
   const navigate = useNavigate();
   // Define a state variable to store the selected image
   const [selectedImage, setSelectedImage] = useState(null);
-  const upload = async () => {
+  const upload1 = async () => {
     const formData = new FormData();
     formData.append("file", selectedImage);
 
@@ -78,7 +78,7 @@ const UploadAndDisplayImage = () => {
           </div>
           <button className="form-submit-btn" type="submit" onClick={async(e) => {
             e.preventDefault();
-            const data=upload().then((e)=>
+            const data=upload1().then((e)=>
             navigate("/potatoresultPage", { state: {result:e.class} }));
           }}>
             Submit

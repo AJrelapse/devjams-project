@@ -85,10 +85,14 @@ function Navbar() {
             </li>
           </ul>
           <form className="d-flex mx-4 px-4" role="search">
-            <button className="button1 mx-4 px-4" type="submit">
+            <button className="button1 mx-4 px-4" type="submit" onClick={async() => {
+            navigate("/Login")
+          }}>
             <span>Login</span>
             </button>
-            <button className="button1 mx-4 px-4" type="submit">
+            <button className="button1 mx-4 px-4" type="submit" onClick={async() => {
+            navigate("/Signup")
+          }}>
             <span>Sign Up</span>
             </button>
 
