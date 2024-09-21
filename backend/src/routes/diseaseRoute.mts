@@ -1,14 +1,23 @@
-import express, { Express, Request, Response,Router } from 'express';
+import express, { Router } from 'express';
+import { Potato } from '../controllers/diseaseController.mjs';
 import multer from 'multer';
-import {Potato} from '../controllers/diseaseController.mjs';
 
 const router: Router = express.Router();
 
+// const uploadDir = path.join(__dirname, 'upload');
+
+// // Ensure the uploads directory exists
+// if (!fs.existsSync(uploadDir)) {
+//     fs.mkdirSync(uploadDir, { recursive: true });
+// }
+
 const upload = multer({
-    storage:
-        multer.memoryStorage()
+    // dest: uploadDir
+    storage: multer.memoryStorage()
 });
 
-router.post('/upload', upload.single('file'), Potato);
+router.post('/potato', upload.single('file'), Potato);
+router.post('/tomato', upload.single('file'), Potato);
+router.post('/pepper', upload.single('file'), Potato);
 
 export default router;
