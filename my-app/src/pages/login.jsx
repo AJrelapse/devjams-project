@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios";
 import styles from "../styles/login.module.css";  // Import CSS module
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -23,8 +26,10 @@ const Login = () => {
         "http://localhost:3001/api/v1/auth/login",
         data,
         { withCredentials: true }
-      );
-      console.log(response.data);
+      ).then((res) => {
+        console.log(res.data);
+        navigate("/")
+      });
     } catch (error) {
       console.log(error);
     }

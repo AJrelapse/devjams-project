@@ -31,7 +31,7 @@ function YieldPredictPage() {
         data,
         { withCredentials: true }
       ).then(()=>
-        navigate("/Yieldresult"));
+        navigate("/Yieldresult" , {state:response.data}));
       console.log(response.data);
     } catch (error) {
       console.log(error);
