@@ -13,7 +13,7 @@ const MapChart = () => {
     const { state, acres } = data;
     setRegionData((prevRegionData) => ({
       ...prevRegionData,
-      [state]: { value: acres },
+      [state]: { value: (prevRegionData[state])?prevRegionData[state].value+acres:acres },
     }));
   };
 
@@ -26,7 +26,7 @@ const MapChart = () => {
         hoverComponent={({ value }) => {
           return (
             <div>
-              <div>{value.value} Acres</div>
+              <div>{(value.value)?value.value:0} Acres</div>
             </div>
           );
         }}
