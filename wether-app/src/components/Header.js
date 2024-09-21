@@ -8,7 +8,7 @@ function Header() {
     <div className='Header'>
       <Place />
       <Search />
-      <Settings />
+      {/* <Settings /> */}
     </div>
   );
 }

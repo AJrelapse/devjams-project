@@ -17,6 +17,7 @@ function Search() {
   }
 
   const changePlace = (place) => {
+    console.log(place)
     setPlace(place);
     setText('');
     setOpenSearchResults(false);
