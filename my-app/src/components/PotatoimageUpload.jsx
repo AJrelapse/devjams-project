@@ -1,12 +1,28 @@
 import React, { useState } from "react";
 import "../styles/imageUpload.css";
 import { useNavigate } from "react-router-dom";
+import FormData from 'form-data'
+
+
 
 // Define a functional component named UploadAndDisplayImage
 const UploadAndDisplayImage = () => {
   const navigate = useNavigate();
   // Define a state variable to store the selected image
   const [selectedImage, setSelectedImage] = useState(null);
+  const upload = async () => {
+    const formData = new FormData();
+    formData.append("file", selectedImage);
+    const response = await fetch("http://localhost:3001/api/v1/potato", {
+      method: "POST",
+      body: formData,
+    });
+    const data = await response.json();
+    console.log(data);
+    return data;
+  }
+
+  
 
   // Return the JSX for rendering
   return (
@@ -51,7 +67,10 @@ const UploadAndDisplayImage = () => {
               }}
             />
           </div>
-          <button className="form-submit-btn" type="submit" onClick={() => navigate("/potatoresultPage")}>
+          <button className="form-submit-btn" type="submit" onClick={async() => {
+            await upload();
+            navigate("/potatoresultPage")
+          }}>
             Submit
           </button>
         </form>

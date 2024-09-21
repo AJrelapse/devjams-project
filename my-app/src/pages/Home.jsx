@@ -6,6 +6,7 @@ import Parallax from "../components/parallax";
 import Footer from "../components/footer";
 import Cards from "../components/cards";
 import {useNavigate} from "react-router-dom";
+import Yield from "../components/yieldpredict";
 
 
 function Home() {
@@ -14,6 +15,7 @@ function Home() {
       <Navbar />
       <Parallax />
       <Cards/>
+      <Yield />
       <Footer />
     </div>
   );
