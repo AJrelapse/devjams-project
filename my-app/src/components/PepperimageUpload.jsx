@@ -4,6 +4,17 @@ import { useNavigate } from "react-router-dom";
 
 // Define a functional component named UploadAndDisplayImage
 const UploadAndDisplayImage = () => {
+  const upload = async () => {
+    const formData = new FormData();
+    formData.append("file", selectedImage);
+    const response = await fetch("http://localhost:3001/api/v1/pepper", {
+      method: "POST",
+      body: formData,
+    });
+    const data = await response.json();
+    console.log(data);
+    return data;
+  }
   const navigate = useNavigate();
   // Define a state variable to store the selected image
   const [selectedImage, setSelectedImage] = useState(null);
@@ -51,8 +62,10 @@ const UploadAndDisplayImage = () => {
               }}
             />
           </div>
-          <button className="form-submit-btn" type="submit" onClick={() => navigate("/pepperresultPage")}>
-            Submit
+          <button className="form-submit-btn" type="submit" onClick={async() => {
+            await upload();
+            navigate("/pepperresultPage")
+          }}>            Submit
           </button>
         </form>
       </div>
