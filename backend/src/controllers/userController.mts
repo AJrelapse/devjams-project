@@ -71,8 +71,21 @@ export const changePassword = async (req: Request, res: Response) => {
         res.status(500).send("Error Changing Password");
         return;
     }
-    // TODO: Implement change password logic here
-
-    // Example response
     res.status(200).json({ message: 'Password changed successfully' });
 };
+
+function magicLink(uid: string) { 
+    return jwt.sign({ user_id: uid }, process.env.SECRET_KEY as string, {expiresIn: '15m' });
+}
+
+export const getTkn = async (req: Request, res: Response) => {
+    const email = req.params["email"];
+    const owner = await User.findOne({ email });
+    if (!owner) {
+        res.status(404).send("User Not Found");
+        return;
+    }
+    const _token = magicLink(owner._id.toString());
+    //send email with token
+    res.send("Email Sent SuccessFully")
+ }

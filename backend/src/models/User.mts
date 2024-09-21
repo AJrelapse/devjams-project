@@ -4,6 +4,7 @@ const { isEmail } = pkg;
 import bcrypt from "bcrypt";
 interface user {
     username: string,
+    state: string,
     email: string,
     password: string,
     createdAt: Date,
@@ -17,6 +18,11 @@ const userSchema = new mongoose.Schema<user>({
         type: String,
         required: [true, 'Please enter an email'],
         unique: true,
+        lowercase: true
+    },
+    "state": {
+        type: String,
+        required: [true, 'Please enter your state'],
         lowercase: true
     },
     "email": {

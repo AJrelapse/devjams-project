@@ -33,6 +33,7 @@ export function logout(_req: Request, res: Response): void {
 
 export async function signup(req: Request, res: Response): Promise<void> {
     const username: String = req.body.name;
+    const state: string = req.body.state;
     const password: String = req.body.password;
     const email: String = req.body.email;
     const admin: boolean = false;
@@ -48,6 +49,7 @@ export async function signup(req: Request, res: Response): Promise<void> {
         try {
             const userData = {
                 username,
+                state,
                 password,
                 email,
                 createdAt,
