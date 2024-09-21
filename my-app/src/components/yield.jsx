@@ -14,11 +14,11 @@ function Yield() {
       <div className={styles.card}>
         <div className={styles.image}></div>
         <div className={styles.content}>
-          <a href="#">
+          
             <span className={styles.cardTitle}>
               Learn more about our advanced yield prediction system.
             </span>
-          </a>
+          
 
           <p className={styles.desc}>
             Gain insights into expected yield based on real-time data and

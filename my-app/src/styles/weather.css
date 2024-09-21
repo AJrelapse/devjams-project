@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+  }
+  
+  .container5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    background: url('./image.jpeg') no-repeat center center fixed; /* Background image */
+    background-size: cover;
+  }
+  
+  .content-wrapper {
+    background: rgba(243, 245, 242, 0.47); /* Semi-transparent background */
+    backdrop-filter: blur(3px); /* Blur effect */
+    border-radius: 15px; /* Rounded corners */
+    /* Add padding */
+  }
+  
+  .imageMap {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .titleMap {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    color: black; /* Changed to white for better contrast */
+    font-size: 5rem;
+    font-weight: 600;
+    text-align: center;
+    animation: slideIn 1s ease-in-out;
+  }
+  
+  .forColor {
+    color: black;
+  }
+  
+  /* Animation Keyframes */
+  @keyframes slideIn {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .titleMap {
+      font-size: 2.5rem;
+    }
+  
+    .imageMap {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    .container {
+      padding: 1rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .titleMap {
+      font-size: 2rem;
+    }
+  
+    .imageMap {
+      max-width: 90%;
+      height: auto;
+    }
+  
+    .container3 {
+      padding: 1rem;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+/*button*/
+  .btnW {
+    background-color: #00BFA6;
+    padding: 14px 40px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 2px dashed #00BFA6;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .4s;
+   }
+   
+   .btnW span:last-child {
+    display: none;
+   }
+   
+   .btnW:hover {
+    transition: .4s;
+    border: 2px dashed #00BFA6;
+    background-color: #fff;
+    color: #00BFA6;
+   }
+   
+   .btnW:active {
+    background-color: #87dbd0;
+   }
+   
+   

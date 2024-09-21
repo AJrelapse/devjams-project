@@ -1,40 +1,69 @@
+body {
+  margin: 0;
+}
 
-  
-  body {
-    margin: 0;
-  }
-  
-  svg {
-    display: inline-block;
-    margin-top: 100px;
-    vertical-align: middle;
-  }
-  
-  .container3 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 2rem;
-    background-image: linear-gradient(180deg, #194b42, #5fa276);
+.container3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background: url('./image2.jpg') no-repeat center center fixed; /* Background image */
+  background-size: cover;
+}
 
-  }
+.content-wrapper {
+  background: rgba(243, 245, 242, 0.47); /* Semi-transparent background */
+  backdrop-filter: blur(3px); /* Blur effect */
+  border-radius: 15px; /* Rounded corners */
+  /* Add padding */
+}
 
 .imageMap {
   width: 100%;
   max-width: 500px;
   height: auto;
   border-radius: 10px;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .titleMap {
-  margin-top: 2%;
-  color: black;
-  font-size: 3rem;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  color: white; /* Changed to white for better contrast */
+  font-size: 5rem;
   font-weight: 600;
   text-align: center;
+  animation: slideIn 1s ease-in-out;
 }
+
+.forColor {
+  color: black;
+}
+
+/* Animation Keyframes */
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -64,5 +93,72 @@
 
   .container3 {
     padding: 1rem;
+  }
+}
+
+
+
+
+
+/* button */
+.mapB {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: #156d4b;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+}
+
+.mapB:after {
+  content: " ";
+  width: 0%;
+  height: 100%;
+  background: #023e09;
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  right: 0;
+}
+
+.mapB:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
+}
+
+.mapB span {
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  padding: 18px 25px;
+  color: #fff;
+  font-size: 1.125em;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  z-index: 20;
+  transition: all 0.3s ease-in-out;
+}
+
+.mapB:hover span {
+  color: #32f1ff;
+  animation: scaleUp 0.3s ease-in-out;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(1);
   }
 }
