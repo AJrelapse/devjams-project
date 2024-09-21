@@ -22,7 +22,7 @@ function Cards() {
               <div className="card__content">
                 <h1 className="card__title">TOMATO</h1>
                 <p className="card__description">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dicta
+                Leverage our cutting-edge AI-powered plant disease predictor to quickly identify if your plant is suffering from any diseases. With advanced machine learning models and real-time analysis, our tool helps you diagnose plant health issues effortlessly, enabling you to take prompt action to protect your crops.
                 </p>
                 <button className="button" onClick={() => navigate("/tomato")}>EXAMINE</button> {/* Replace history.push with navigate */}
               </div>
@@ -43,8 +43,7 @@ function Cards() {
               <div className="card__content">
                 <h1 className="card__title">POTATO</h1>
                 <p className="card__description">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dicta
-                </p>
+                Leverage our cutting-edge AI-powered plant disease predictor to quickly identify if your plant is suffering from any diseases. With advanced machine learning models and real-time analysis, our tool helps you diagnose plant health issues effortlessly, enabling you to take prompt action to protect your crops.                </p>
                 <button className="button" onClick={() => navigate("/potato")}>EXAMINE</button> {/* Navigate to the potato page */}
               </div>
             </div>
@@ -64,8 +63,7 @@ function Cards() {
               <div className="card__content">
                 <h1 className="card__title">PEPPER</h1>
                 <p className="card__description">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dicta
-                </p>
+                Leverage our cutting-edge AI-powered plant disease predictor to quickly identify if your plant is suffering from any diseases. With advanced machine learning models and real-time analysis, our tool helps you diagnose plant health issues effortlessly, enabling you to take prompt action to protect your crops.                </p>
                 <button className="button" onClick={() => navigate("/pepper")}>EXAMINE</button> {/* Navigate to the pepper page */}
               </div>
             </div>

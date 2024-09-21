@@ -6,6 +6,8 @@ const TomatoresultDisplay = (props) => {
 
   // Return the JSX for rendering
   return (
+
+    
     <div className="form-wrapper">
       <div className="form-container">
         <form className="form">
