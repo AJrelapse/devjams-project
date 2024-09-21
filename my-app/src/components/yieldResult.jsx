@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import styles from '../styles/YieldResult.module.css'; // Import CSS module
 
-function YieldResultPage(props) {
+const YieldResultPage=(props)=> {
   const navigate = useNavigate();
-
+console.log(props)
   return (
     <div className={styles.container}>
       <div className={styles.resultCard}>
@@ -12,8 +12,8 @@ function YieldResultPage(props) {
 
 
           <div className={styles.resultContent}>
-            <p><strong>Crop:</strong> {props.result.crop}</p>
-            <p><strong>Predicted Yield:</strong> {props.result.predictedYield}</p>
+            <p><strong>Crop:</strong> {props.result.cropType}</p>
+            <p><strong>Predicted Yield:</strong> {props.result.yield}</p>
             <p><strong>Season:</strong> {props.result.season}</p>
             <p><strong>Area:</strong> {props.result.area}</p>
           </div>
