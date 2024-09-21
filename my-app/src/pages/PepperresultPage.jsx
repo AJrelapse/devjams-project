@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/App.css";
 import "../styles/pages.css";
 import Navbar from "../components/navbar";
-import PepperresultDisplay from "../components/potatoResult";
+import PepperresultDisplay from "../components/pepperResult";
 import Footer from "../components/footer";
 import {useNavigate,useLocation} from "react-router-dom";
 

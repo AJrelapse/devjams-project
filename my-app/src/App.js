@@ -34,6 +34,9 @@ function App() {
           <Route path="/YieldPage" element={<YieldPredict />} />
           <Route path="/Yieldresult" element={<YieldResult />} />
           <Route path="/MapPage" element={<MapPage />} />
+          <Route path="/Login" element={<Login />} />
+          <Route path="/Signup" element={<Signup />} />
+
         </Routes>
       </Router>
 
