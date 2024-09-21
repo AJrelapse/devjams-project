@@ -1,41 +1,39 @@
 import React from "react";
-import "../styles/yield.css";
-import { useNavigate } from "react-router-dom"; 
-
+import styles from "../styles/yieldpage.module.css";
+import { useNavigate } from "react-router-dom";
 
 function Yield() {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   return (
-    <div className="container2 cards1">
-      <h1 className="titleY">YIELD PREDICTOR</h1>
+    <div className={styles.container}>
+      <h1 className={styles.title}>YIELD PREDICTOR</h1>
       
-      <div className="card">
-        <div className="image"></div>
-        <div className="content">
+      <div className={styles.parallax}></div>
+      
+      <div className={styles.card}>
+        <div className={styles.image}></div>
+        <div className={styles.content}>
           <a href="#">
-            <span className="title">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            <span className={styles.cardTitle}>
+              Learn more about our advanced yield prediction system.
             </span>
           </a>
 
-          <p className="desc">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
-            dolores, possimus pariatur animi temporibus nesciunt praesentium.
+          <p className={styles.desc}>
+            Gain insights into expected yield based on real-time data and
+            advanced AI models. Make data-driven decisions for better
+            outcomes.
           </p>
 
           <button
-            className="form-submit-btn action"
-            type="submit"
-            onClick={async () => {
-              navigate("/YieldPage");
-            }}
+            className={`${styles.action} ${styles.animate}`}
+            onClick={() => navigate("/YieldPage")}
           >
-            Find More <span aria-hidden="true">→</span>
+            Explore More <span aria-hidden="true">→</span>
           </button>
         </div>
       </div>
-      
     </div>
   );
 }

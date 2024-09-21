@@ -10,12 +10,14 @@ import Map from "../components/map";
 import Weather from "../components/weather";
 
 
+
 function Home() {
   return (
     <div className="App">
       <Navbar />
       <Parallax />
       <Cards/>
+      
       <Yield />
       <Map />
       <Weather/>

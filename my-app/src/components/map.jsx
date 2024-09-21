@@ -1,5 +1,4 @@
 import React from 'react';
-import "../styles/yield.css";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 function Map() {
