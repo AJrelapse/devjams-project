@@ -7,13 +7,25 @@ const UploadAndDisplayImage = () => {
   const upload = async () => {
     const formData = new FormData();
     formData.append("file", selectedImage);
-    const response = await fetch("http://localhost:3001/api/v1/pepper", {
-      method: "POST",
-      body: formData,
-    });
-    const data = await response.json();
-    console.log(data);
-    return data;
+
+    try {
+      const response = await fetch("http://localhost:3001/api/v1/disease/pepper", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      console.log('Upload successful:', data);
+      // const data = await response.json();
+      // console.log(data);
+      return data;
+    } catch (error) {
+      console.error('Error during file upload:', error);
+    }
   }
   const navigate = useNavigate();
   // Define a state variable to store the selected image
@@ -62,15 +74,17 @@ const UploadAndDisplayImage = () => {
               }}
             />
           </div>
-          <button className="form-submit-btn" type="submit" onClick={async() => {
-            // await upload();
-            navigate("/pepperresultPage")
-          }}>            Submit
+          <button className="form-submit-btn" type="submit" onClick={async (e) => {
+            e.preventDefault();
+            const data = upload().then((e) =>
+              navigate("/pepperresultPage", { state: { result: e.class } }));
+          }}>
+            Submit
           </button>
         </form>
       </div>
     </div>
-    
+
   );
 };
 

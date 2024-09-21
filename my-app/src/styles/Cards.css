@@ -20,7 +20,7 @@
   grid-template-rows: repeat(var(--cards), var(--cardHeight));
   gap: var(--cardMargin);
   padding-bottom: calc(var(--cards) * var(--cardTopPadding));
-  margin-bottom: var(--cardMargin);
+  
 }
 
 #card1 {
