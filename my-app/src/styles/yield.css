@@ -1,11 +1,14 @@
 /* Container Styling */
 .container2 {
+.container2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     padding: 2rem;
+    background-image: linear-gradient(180deg, #10D164, #2ebf91);
+
     background-image: linear-gradient(180deg, #10D164, #2ebf91);
 
   }
