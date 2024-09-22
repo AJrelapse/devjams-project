@@ -1,0 +1,120 @@
+/* Wrapping container for centering */
+
+.form-wrapper {
+  background: linear-gradient(to right, #8fd3f4, #84fab0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+/* Main form container */
+.form-container {
+  width: 400px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  font-family: 'Roboto', sans-serif;
+}
+
+.h1{
+  font-family: 'Roboto', sans-serif;
+  color: #003329;
+
+}
+/* Form styling */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Form group styling */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Label styling */
+.form-group label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #003329;
+}
+
+/* Upload input styling */
+.upload-input {
+  padding: 10px;
+  border: 1px solid #003329;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #f4f4f4;
+  transition: border-color 0.3s ease;
+}
+
+/* Upload input hover and focus effects */
+.upload-input:hover,
+.upload-input:focus {
+  border-color: #51e8bd;
+}
+
+/* Image preview styling */
+.image-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.image-preview img {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Remove button styling */
+.remove-btn {
+  background-color: #ff4b4b;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.remove-btn:hover {
+  background-color: #ff1a1a;
+}
+
+/* Submit button styling */
+.form-submit-btn {
+  background-color: #003329;
+  color: white;
+  padding: 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-submit-btn:hover {
+  background-color: #51e8bd;
+  color: #003329;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .form-container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .upload-input {
+    font-size: 12px;
+  }
+}

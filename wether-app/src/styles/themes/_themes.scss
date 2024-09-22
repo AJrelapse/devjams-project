@@ -1,0 +1,13 @@
+@use '../variables/colors' as *;
+
+// Dark Theme with Greenish Tone
+
+
+// Light Theme with Greenish Tone
+.App-light {
+  --main-bg-color: #e3f4e0; /* Very light green for the background */
+  --header-bg-color: #bde5bc; /* Soft green for the header */
+  --border-color: #a3cfa4; /* Light green for borders */
+  --primary-text-color: #2a5b38; /* Darker green for primary text */
+  --secondary-text-color: #486f56; /* Softer dark green for secondary text */
+}

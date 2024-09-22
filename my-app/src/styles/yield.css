@@ -1,0 +1,153 @@
+/* Container Styling */
+.container2 {
+.container2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    background-image: linear-gradient(180deg, #10D164, #2ebf91);
+
+    background-image: linear-gradient(180deg, #10D164, #2ebf91);
+
+  }
+  
+  /* Heading Styling */
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    /* color: #fff; */
+    margin-bottom: 2rem; /* Adds space below the heading */
+    text-align: center;
+  }
+  
+  /* Card Styles */
+  .card {
+    max-width: 500px;
+    border-radius: 0.75rem;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid transparent;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 20px;
+    width: 100%; /* Ensures it fits the container width */
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card a {
+    text-decoration: none;
+  }
+  
+  /* Card Image */
+  .image {
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+    background-image: url("..\\..\\public\\assets\\images\\yield2.jpg")  ;
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+  
+  /* Card Content */
+  .content {
+    padding: 1.5rem;
+  }
+  
+  .title {
+    color: #1f2937;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 700;
+  }
+  
+  .desc {
+    margin-top: 0.75rem;
+    color: #6b7280;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+  }
+  
+  /* Action Button */
+  .action {
+    display: inline-flex;
+    margin-top: 1rem;
+    color: #ffffff;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #2563EB;
+    padding: 8px 12px;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(37, 99, 235, 0.4);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .action:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+  }
+  
+  .action span {
+    transition: 0.3s ease;
+  }
+  
+  .action:hover span {
+    transform: translateX(6px);
+  }
+  
+
+  .titleY{
+    margin: 5%;
+    color: white;
+    font-size: 60px;
+    font-weight: 600;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

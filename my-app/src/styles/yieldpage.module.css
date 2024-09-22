@@ -1,0 +1,121 @@
+/* Container Styling with Parallax */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 2rem;
+    text-align: center;
+    z-index: 10;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  /* Parallax Effect */
+  .parallax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('./0_-pOySD-Yf6yiyInP.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+   
+  }
+  
+  /* Card Styles */
+  .card {
+    max-width: 500px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 20px;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Card Content */
+  .content {
+    padding: 1.5rem;
+  }
+  
+  .cardTitle {
+    color: #1f2937;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    transition: color 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .cardTitle:hover {
+    color: #2563EB;
+  }
+  
+  .desc {
+    margin-top: 1rem;
+    color: #6b7280;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  
+  /* Action Button with Animation */
+  .action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2563EB;
+    color: #fff;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .action:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-3px);
+  }
+  
+  .action span {
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .action:hover span {
+    transform: translateX(8px);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes parallaxMove {
+    from { background-position: center 0; }
+    to { background-position: center 100%; }
+  }
+  
