@@ -83,7 +83,10 @@ pip install -r requirements.txt
 ```bash
 docker-compose up
 ```
-### Contributing
+### Contributors
 
-Feel free to submit issues or pull requests. Contributions are welcome to improve the platform.
+- HEMANTH RAJA - Frontend
+- AJAY ANAND -Frontend
+- AADAVAN - Backend
+- SARVESH - ML Models
 
